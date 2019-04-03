@@ -17,6 +17,7 @@ class CreatePacientesTable extends Migration
             $table->increments('id');
             $table->string('Nombre');
             $table->string('Rut', 10)->unique();
+            $table->date('FechaNacimiento');
             $table->string('Direccion');
             $table->string('Comuna', 200);
             $table->integer('TelefonoFijo')->nullable();
@@ -24,6 +25,7 @@ class CreatePacientesTable extends Migration
             $table->string('EstadoCivil', 100);
             $table->string('CentroAtencionUrgencia');
             $table->string('MedicoTratante');
+            $table->date('InicioCuidados');
             $table->integer('Activo');
             $table->timestamps();
         });

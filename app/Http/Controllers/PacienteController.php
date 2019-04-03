@@ -14,7 +14,8 @@ class PacienteController extends Controller
      */
     public function index()
     {
-        //
+        $pacientes = Paciente::get();
+        //this->withoutExceptionHandling();
     }
 
     /**
@@ -35,7 +36,19 @@ class PacienteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $paciente = new Paciente();
+        $paciente->Nombre = $request['Nombre'];
+        $paciente->FechaNacimiento = $request['FechaNacimiento'];
+        $paciente->Direccion = $request['Direccion'];
+        $paciente->Comuna = $request['Comuna'];
+        $paciente->TelefonoFijo = $request['TelefonoFijo'];
+        $paciente->Celular = $request['Celular'];
+        $paciente->EstadoCivil = $request['EstadoCivil'];
+        $paciente->CentroAtencionUrgencia = $request['CentroAtencionUrgencia'];
+        $paciente->MedicoTratante = $request['MedicoTratante'];
+        $paciente->InicioCuidados = $request['InicioCuidados'];
+        $paciente->Activo = 1;
+        $paciente->save();
     }
 
     /**
