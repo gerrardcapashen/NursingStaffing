@@ -16,6 +16,8 @@ class PacienteController extends Controller
     {
         $pacientes = Paciente::get();
         //this->withoutExceptionHandling();
+        $title = 'Listado de pacientes';
+        return view('pacientes.index', compact('title','pacientes'));
     }
 
     /**
@@ -25,7 +27,7 @@ class PacienteController extends Controller
      */
     public function create()
     {
-        //
+        // añadir funcionalidades del controlador y vistas para el paciente!!!
     }
 
     /**

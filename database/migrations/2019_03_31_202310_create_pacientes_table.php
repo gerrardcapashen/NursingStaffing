@@ -22,7 +22,7 @@ class CreatePacientesTable extends Migration
             $table->string('Comuna', 200);
             $table->integer('TelefonoFijo')->nullable();
             $table->integer('celular')->nullable();
-            $table->string('EstadoCivil', 100);
+            $table->enum('EstadoCivil', ['Soltero/a','Casado/a','Conviviente Civil','Divorciado/a','Viudo/a']);
             $table->string('CentroAtencionUrgencia');
             $table->string('MedicoTratante');
             $table->date('InicioCuidados');

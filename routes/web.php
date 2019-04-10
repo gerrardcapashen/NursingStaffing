@@ -23,4 +23,4 @@ Route::get('/usuarios/nuevo', 'UserController@create');
 
 Route::get('/saludo/{name}/{nickname?}', 'WelcomeUserController');
 
-// Route::resource('noticias', 'NoticiasController');
+Route::get('/pacientes', 'PacienteController@index');

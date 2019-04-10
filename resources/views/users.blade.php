@@ -1,10 +1,11 @@
 @include('header')
+@include('tabs')
 <h1>{{ $title }}</h1>
-	<ul>
-		@forelse ($users as $user)
-			<li>{{ $user }}</li>
-        @empty
-            <li>No hay usuarios registrados.</li>
-		@endforelse
-    </ul>
+<ul>
+	@forelse ($users as $user)
+		<li>{{ $user }}</li>
+    @empty
+        <li>No hay usuarios registrados.</li>
+	@endforelse
+</ul>
 @include('footer')
