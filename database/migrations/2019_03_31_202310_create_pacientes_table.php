@@ -15,18 +15,18 @@ class CreatePacientesTable extends Migration
     {
         Schema::create('pacientes', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('Nombre');
-            $table->string('Rut', 10)->unique();
-            $table->date('FechaNacimiento');
-            $table->string('Direccion');
-            $table->string('Comuna', 200);
-            $table->integer('TelefonoFijo')->nullable();
-            $table->integer('celular')->nullable();
-            $table->enum('EstadoCivil', ['Soltero/a','Casado/a','Conviviente Civil','Divorciado/a','Viudo/a']);
-            $table->string('CentroAtencionUrgencia');
-            $table->string('MedicoTratante');
-            $table->date('InicioCuidados');
-            $table->integer('Activo');
+            $table->string('nombre');
+            $table->string('rut', 10)->unique();
+            $table->date('fechaNacimiento');
+            $table->enum('estadoCivil', ['Soltero/a','Casado/a','Conviviente Civil','Divorciado/a','Viudo/a']);
+            $table->string('direccion');
+            $table->string('comuna', 200);
+            $table->integer('telefonoFijo')->nullable();
+            $table->integer('celular')->nullable(); 
+            $table->string('centroAtencionUrgencia');
+            $table->string('medicoTratante');
+            $table->date('inicioCuidados');
+            $table->integer('activo');
             $table->timestamps();
         });
     }

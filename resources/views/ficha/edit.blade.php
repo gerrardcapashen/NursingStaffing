@@ -1,3 +1,9 @@
+@extends('layout')
+@section('title', 'Pacientes')
+@section('pacienteActive', 'active')
+@section('pacienteShow', 'show')
+
+@section('ficha_paciente')
 <nav>
   <div class="nav nav-tabs" id="nav-tab-2" role="tablist">
     <a class="nav-item nav-link active" id="nav-paciente-tab" data-toggle="tab" href="#nav-paciente"  role="tab" aria-controls="nav-paciente" aria-selected="false">Antecedentes del paciente</a>
@@ -8,8 +14,9 @@
 </nav>
 
 <div class="tab-content" id="nav-tabContent-2">
-  <div class="tab-pane fade show" id="nav-paciente" role="tabpanel" aria-labelledby="nav-paciente-tab">antecedentes del paciente</div>
-  <div class="tab-pane fade" id="nav-salud" role="tabpanel" aria-labelledby="nav-salud-tab">antecedentes de salud</div>
-  <div class="tab-pane fade" id="nav-ayuda" role="tabpanel" aria-labelledby="nav-ayuda-tab">ayudas técnicas</div>
-  <div class="tab-pane fade" id="nav-social" role="tabpanel" aria-labelledby="nav-social-tab">antecedentes sociales</div>
+  <div class="tab-pane fade active show" id="nav-paciente" role="tabpanel" aria-labelledby="nav-paciente-tab">@include('ficha.ant_paciente')</div>
+  <div class="tab-pane fade" id="nav-salud" role="tabpanel" aria-labelledby="nav-salud-tab">@include('ficha.ant_salud')</div>
+  <div class="tab-pane fade" id="nav-ayuda" role="tabpanel" aria-labelledby="nav-ayuda-tab">@include('ficha.ayudas_tecnicas')</div>
+  <div class="tab-pane fade" id="nav-social" role="tabpanel" aria-labelledby="nav-social-tab">@include('ficha.ant_sociales')</div>
 </div>
+@endsection

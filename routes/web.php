@@ -24,3 +24,6 @@ Route::get('/usuarios/nuevo', 'UserController@create');
 Route::get('/saludo/{name}/{nickname?}', 'WelcomeUserController');
 
 Route::get('/pacientes', 'PacienteController@index');
+
+Route::get('/pacientes/{paciente}/editar', 'PacienteController@edit')
+	->name('pacientes.edit');

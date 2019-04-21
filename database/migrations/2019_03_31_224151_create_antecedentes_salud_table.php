@@ -22,6 +22,7 @@ class CreateAntecedentesSaludTable extends Migration
             $table->string('prestadorSalud');
             $table->integer('cuidadoras_horas');
             $table->integer('cuidadoras_numero');
+            $table->string('controles_medicos');
             $table->enum('flg_Rehabilitacion', ['Sí','No']);
             $table->enum('flg_RehabDomiciliaria', ['Sí','No']);
             $table->enum('flg_RehabAmbulatoria', ['Sí','No']);

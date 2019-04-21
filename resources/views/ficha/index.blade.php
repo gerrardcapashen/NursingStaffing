@@ -1,10 +1,7 @@
-@extends('layout')
+@extends('layout-2')
 @section('title', 'Pacientes')
-@section('pacienteActive', 'active')
-@section('pacienteShow', 'show')
 
-@section('content')
-@include('pacientes.tabs')
+@section('pacientes')
     <h1>{{ $title }}</h1>
 
     <ul>

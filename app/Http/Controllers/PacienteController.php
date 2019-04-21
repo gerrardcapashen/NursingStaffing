@@ -17,7 +17,9 @@ class PacienteController extends Controller
         $pacientes = Paciente::get();
         //this->withoutExceptionHandling();
         $title = 'Listado de pacientes';
-        return view('pacientes.index', compact('title','pacientes'));
+        $asdf = 'S';
+        
+        return view('ficha.index', compact('title','pacientes','asdf'));
     }
 
     /**
@@ -61,7 +63,8 @@ class PacienteController extends Controller
      */
     public function show(Paciente $paciente)
     {
-        //
+        $paciente = Paciente::get();
+        return view('ficha.show', compact('paciente'));
     }
 
     /**
@@ -72,7 +75,16 @@ class PacienteController extends Controller
      */
     public function edit(Paciente $paciente)
     {
-        //
+        // hacer VISTA ESPECIAL PARA esta accion y cambiar la ficha.index a otra
+        $title = 'Editando paciente';
+        $asdf = 'S';
+
+        //dd($paciente->nombre);
+        return view('ficha.edit', [
+            'paciente' => $paciente, 
+            'title' => $title,
+            'asdf' => $asdf,
+        ]);
     }
 
     /**
